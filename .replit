@@ -1,4 +1,4 @@
-entrypoint = "HW6_Davis_Intro.py"
+entrypoint = "main.py"
 modules = ["python-3.11"]
 
 [nix]
@@ -11,5 +11,5 @@ language = "python3"
 requiredFiles = [".replit", "replit.nix"]
 
 [deployment]
-run = ["python3", "HW6_Davis_Intro.py"]
+run = ["python3", "main.py"]
 deploymentTarget = "cloudrun"
