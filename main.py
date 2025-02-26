@@ -12,10 +12,9 @@ screen = pygame.display.set_mode((width,height))
 pygame.display.set_caption("snake")
 
 #fps
-clock = pygame.time.Clock
+clock = pygame.time.Clock()
 dt = 0
 speed = 10
-
 
 """game loop"""
 running = True
@@ -29,7 +28,40 @@ while running:
   
   """draw to our screen"""
   #clear screen
-  screen.fill("white") 
+  screen.fill("white")
+
+  # draw rectangle
+  pygame.draw.rect(
+    screen, 
+    "green", 
+    pygame.Rect((100,200),(100,50))
+  )
+
+  #draw circle
+  pygame.draw.circle(
+    screen, 
+    "blue", 
+    (100,200), 40
+  )
+  
+  pygame.draw.circle(
+    screen, 
+    "black", 
+  (200,200), 100
+  )
+
+  #draw line
+  pygame.draw.line(
+    screen, 
+    "red", 
+    (100,100), (200,200), 5
+  )
+
+  #ellipse
+  pygame.draw.ellipse(
+    surface=screen, color="red",rect=pygame.Rect((100,100),((100,500))))
+  
+
   #update screen
   pygame.display.flip()
 
@@ -37,6 +69,5 @@ while running:
   #fps
   dt = clock.tick(speed)/1000
 
-#quit pygame
+  #quit pygame
 pygame.quit()
-
