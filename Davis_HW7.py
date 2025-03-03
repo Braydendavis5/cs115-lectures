@@ -1,3 +1,8 @@
+#Brayden Davis
+#3/2/1015
+#HW7
+#This is Frogger
+
 #This is to import pygame, so that I can make my game.
 import pygame
 
@@ -38,6 +43,12 @@ while running:
     (0,600), (800,600), 50
   )
 
+   #draw sidewalk, at the bottum of the screen
+  pygame.draw.line(
+    screen, 
+    "dark green", 
+    (0,0), (800,0), 50
+  ) 
     #draw road1
   pygame.draw.line(
     screen, 
@@ -66,10 +77,10 @@ while running:
     (0,200), (800,200), 5
   )
  
-  # draw square frog
+  # draw frog
   pygame.draw.rect(
     screen, 
-    "dark green", 
+    "light green", 
     pygame.Rect((300,590),(25,25))
   )
 
