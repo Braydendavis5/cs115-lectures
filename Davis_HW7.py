@@ -1,76 +1,77 @@
-#Brayden Davis
-#3/2/1015
-#HW7
-#This is Frogger
+# Brayden Davis
+# 3/2/1015
+# HW7
+# This is the art/screen for Frogger
 
-#This is to import pygame, so that I can make my game.
+# This is to import pygame, so that I can make my game.
 import pygame
 
-#init pygame
+# init pygame
 pygame.init()
 
-#window dimensions
+# window dimensions
 width = 800
 height = 800
 screen = pygame.display.set_mode((width,height))
 
-#set window title
+# set window title
 pygame.display.set_caption("Frogger")
 
-#fps
+# fps
 clock = pygame.time.Clock()
 dt = 0
 speed = 10
 
-#game loop
+# game loop
 running = True
 while running:
-  #Handle events
+  # Handle events
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
       running = False
 
-  #update our game state
+  # update our game state
   
-  #draw to our screen
-  #clear screen
+  # draw to our screen
+  # clear screen
   screen.fill("green")
 
-  #draw sidewalk, at the bottum of the screen
+  # draw sidewalk, at the bottum of the screen
   pygame.draw.line(
     screen, 
     "grey", 
     (0,600), (800,600), 50
   )
 
-   #draw sidewalk, at the bottum of the screen
+  # Win state
   pygame.draw.line(
     screen, 
     "dark green", 
     (0,0), (800,0), 50
   ) 
-    #draw road1
+  
+  # draw road1
   pygame.draw.line(
     screen, 
     "black", 
     (0,400), (800,400), 100
   )
 
-      #draw road2
+  # draw road2
   pygame.draw.line(
     screen, 
     "black", 
     (0,200), (800,200), 100
   )
 
-      #draw middle of road1
+  # draw middle of road1
   pygame.draw.line(
     screen, 
     "yellow", 
     (0,400), (800,400), 5
   )
 
-        #draw middle of road2
+  # draw middle of road2
   pygame.draw.line(
     screen, 
     "yellow", 
@@ -112,11 +113,12 @@ while running:
     pygame.Rect((220,160),(40,25))
   )
 
-  #update screen
+  
+  # update screen
   pygame.display.flip()
 
-  #fps
+  # fps
   dt = clock.tick(speed)/1000
 
-  #quit pygame
+  # quit pygame
 pygame.quit()
