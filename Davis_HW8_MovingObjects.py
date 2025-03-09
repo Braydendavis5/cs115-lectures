@@ -6,9 +6,12 @@
 # This is to import pygame, so that I can make my game.
 import pygame
 
-
 # init pygame
 pygame.init()
+
+system_fonts = pygame.font.get_fonts()
+myFont = pygame.font.SysFont(name=system_fonts[0], size=48,
+                             bold=True, italic=False)
 
 # window dimensions
 width = 800
@@ -23,7 +26,7 @@ pygame.display.set_caption("Frogger")
 clock = pygame.time.Clock()
 dt = 0
 speed = 10
-
+score = 0
 # game loop
 running = True
 while running:
@@ -33,14 +36,11 @@ while running:
       running = False
 
   # update our game state
-  
+
   # draw to our screen
   # clear screen
   screen.fill("green")
-
-  #ADD HERE!!!
-
-
+  
   # draw sidewalk, at the bottum of the screen
   pygame.draw.line(
     screen, 
@@ -117,6 +117,12 @@ while running:
     "blue", 
     pygame.Rect((220,160),(40,25))
   )
+
+  # This is for the score
+  score_image = myFont.render(f"Score: {score}", True, "white")
+  score_rect = score_image.get_rect()
+  score_rect.topleft = (20, 20)
+  screen.blit(score_image, score_rect)
 
   # update screen
   pygame.display.flip()

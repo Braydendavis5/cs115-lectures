@@ -1,4 +1,4 @@
-entrypoint = "Davis_HW7.py"
+entrypoint = "Davis_HW8_MovingObjects.py"
 modules = ["python-3.11"]
 
 [nix]
@@ -11,5 +11,5 @@ language = "python3"
 requiredFiles = [".replit", "replit.nix"]
 
 [deployment]
-run = ["python3", "Davis_HW7.py"]
+run = ["python3", "Davis_HW8_MovingObjects.py"]
 deploymentTarget = "cloudrun"
